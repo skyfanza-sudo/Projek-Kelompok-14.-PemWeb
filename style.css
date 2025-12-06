@@ -1,0 +1,181 @@
+/* --- 1. Reset dan Gaya Dasar --- */
+* {
+    /* Memastikan padding dan border termasuk dalam perhitungan lebar elemen */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Background abu-abu muda */
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #00adb3; /* Warna tautan biru khas e-commerce */
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- 2. Header dan Navigasi --- */
+header {
+    background: #fff;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: 3px solid #0056b3; /* Garis bawah biru */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: #480be3;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul li a {
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+}
+
+.search-bar input[type="search"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 250px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    border: none;
+    background: #0056b3;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+/* --- 3. Tata Letak Utama (Main, Section, Aside) --- */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    gap: 20px;
+}
+
+/* Konten utama mengambil sebagian besar ruang */
+.featured-products {
+    flex: 3; 
+}
+
+/* Sidebar mengambil sisa ruang */
+aside {
+    flex: 1;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    height: fit-content; /* Agar sidebar tidak memanjang ke bawah tanpa isi */
+}
+
+/* --- 4. Banner Utama --- */
+.hero-banner {
+    background: #ff5722; /* Warna promo oranye/merah */
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+/* --- 5. Tampilan Produk (Grid) --- */
+.product-grid {
+    display: grid;
+    /* Membuat grid responsif: minimal 200px per kolom, otomatis menyesuaikan */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    height: 200px;
+    object-fit: cover; /* Memastikan gambar pas tanpa merusak aspek rasio */
+    margin-bottom: 1rem;
+}
+
+.product-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-item .price {
+    color: #dc3545; /* Warna merah untuk harga */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.buy-button {
+    background: #28a745; /* Warna hijau untuk tombol beli */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* --- 6. Footer --- */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 5%;
+    margin-top: 2rem;
+}
+
+.footer-links ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul li a {
+    color: white;
+    margin: 0 15px;
+    opacity: 0.8;
+}
+
+.footer-links ul li a:hover {
+    opacity: 1;
+}
+
+.copyright p {
+    font-size: 0.8rem;
+    color: #ccc;
+}
